@@ -18,7 +18,7 @@
     <div class="cointainer">
         <div class="calculator">
             <input type="text" placeholder="0" id="outputscreen">
-            <button onclick="clear()" class="actions">CL</button>
+            <button onclick="clearScreen()" class="actions">CL</button>
             <button onclick="del()" class="actions">DEL</button>
             <button onclick="display('%')" class="actions">%</button>
             <button onclick="display('/')" class="actions">/</button>
@@ -59,10 +59,9 @@
                 alert("invalid")
                }
         }
-        // 
-        function clear() {
-        document.getElementById('result').value = '';
-    }
+        function clearScreen() {
+            outputscreen.value = '';
+        }
         
         function del(){
             outputscreen.value = outputscreen.value.slice(0,-1);
