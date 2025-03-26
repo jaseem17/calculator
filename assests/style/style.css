@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* *{
+=======
+*{
+>>>>>>> origin/main
     margin: 0px;
     padding: 0px;
     background-color: #000000;
@@ -26,7 +30,11 @@
 input{
     grid-column: span 4;
     height: 80px;
+<<<<<<< HEAD
     width: 280px;
+=======
+    width: 260px;
+>>>>>>> origin/main
     background-color: #ecf0f3;
     box-shadow: inset -5px -5px 12px #ffffff,
                 inset  5px 5px 12px rgba(0, 0, 0, 0.342);
@@ -75,4 +83,8 @@ button:hover {
 }
 
 
+<<<<<<< HEAD
  */
+=======
+
+>>>>>>> origin/main
