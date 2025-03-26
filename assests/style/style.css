@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0px;
     padding: 0px;
     background-color: #000000;
@@ -26,7 +26,7 @@
 input{
     grid-column: span 4;
     height: 80px;
-    width: 260px;
+    width: 280px;
     background-color: #ecf0f3;
     box-shadow: inset -5px -5px 12px #ffffff,
                 inset  5px 5px 12px rgba(0, 0, 0, 0.342);
@@ -75,4 +75,4 @@ button:hover {
 }
 
 
-
+ */

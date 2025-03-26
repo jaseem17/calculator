@@ -1,75 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculator</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Permanent+Marker" />
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/promyc/promyc/assests/images/mainlogo.png" type="image/x-icon">
-
+    <title>Calculator</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="cointainer">
-        <div class="calculator">
-            <input type="text" placeholder="0" id="outputscreen">
-            <button onclick="clear()" class="actions">CL</button>
-            <button onclick="del()" class="actions">DEL</button>
-            <button onclick="display('%')" class="actions">%</button>
-            <button onclick="display('/')" class="actions">/</button>
-            <button onclick="display('7')">7</button>
-            <button onclick="display('8')">8</button>
-            <button onclick="display('9')">9</button>
-            <button onclick="display('*')" class="actions">*</button>
-            <button onclick="display('4')">4</button>
-            <button onclick="display('5')">5</button>
-            <button onclick="display('6')">6</button>
-            <button onclick="display('-')" class="actions">-</button>
-            <button onclick="display('1')">1</button>
-            <button onclick="display('2')">2</button>
-            <button onclick="display('3')">3</button>
-            <button onclick="display('+')" class="actions">+</button>
-            <button onclick="display('0')">0</button>
-            <button onclick="display('.')" class="actions">.</button>
-           
-            <button onclick="calculate()" class="equal">=</button>
-            
 
+<body class="bg-black">
+
+    <div class="flex justify-center items-center min-h-screen">
+        <div
+            class="bg-gray-300 p-6 rounded-3xl shadow-inner grid grid-cols-4 gap-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
+
+            <!-- Output screen -->
+            <input type="text" placeholder="0" id="outputscreen"
+                class="col-span-4 h-20 w-64 bg-gray-100 text-black text-5xl text-right px-5 py-4 rounded-xl shadow-inner shadow-white mb-8">
+
+            <!-- Calculator buttons -->
+            <button id="clear"
+                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">AC</button>
+            <button id="del"
+                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">DE</button>
+            <button id="percent"
+                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">%</button>
+            <button id="divide"
+                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">/</button>
+
+            <button
+                class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl hover:bg-blue-500 hover:text-white">7</button>
+
+            <button
+                class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">8</button>
+            <button
+                class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">9</button>
+            <button id="multiply"
+                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl  hover:bg-blue-500 hover:text-white">*</button>
+
+            <button
+                class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">4</button>
+            <button
+                class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">5</button>
+            <button
+                class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">6</button>
+            <button id="minus"
+                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl    hover:bg-blue-500 hover:text-white">-</button>
+
+            <button
+                class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">1</button>
+            <button
+                class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">2</button>
+            <button
+                class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl    hover:bg-blue-500 hover:text-white">3</button>
+            <button id="plus"
+                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">+</button>
+
+            <button
+                class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">0</button>
+            <button id="decimal"
+                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl    hover:bg-blue-500 hover:text-white">.</button>
+            <button id="equals"
+                class="bg-blue-500 text-white h-12 w-30 rounded-full shadow-md text-xl col-span-2 ">=</button>
         </div>
     </div>
 
     <script>
-        let outputscreen = document.getElementById("outputscreen");
+        $(document).ready(function () {
+            const $outputScreen = $('#outputscreen');
 
+            function display(number) {
+                let currentVal = $outputScreen.val();
+                if (currentVal === '0') {
+                    $outputScreen.val(number);
+                } else {
+                    $outputScreen.val(currentVal + number);
+                }
+            }
 
-        function display(number){
-            outputscreen.value += number;
-        }
-        function calculate(){
-            try{
-                outputscreen.value = eval(outputscreen.value);
-               }
-               catch(err)
-               {
-                alert("invalid")
-               }
-        }
-        // 
-        function clear() {
-        document.getElementById('result').value = '';
-    }
-        
-        function del(){
-            outputscreen.value = outputscreen.value.slice(0,-1);
-        }
+            function calculate() {
+                try {
+                    let result = eval($outputScreen.val());
+                    if (isNaN(result) || result === Infinity || result === -Infinity) {
+                        throw new Error("Invalid expression");
+                    }
+                    $outputScreen.val(result);
+                } catch (err) {
+                    alert("Invalid expression");
+                    $outputScreen.val('Error');
+                }
+            }
 
-        
+            function clearScreen() {
+                $outputScreen.val('');
+            }
+
+            function del() {
+                let currentValue = $outputScreen.val();
+                $outputScreen.val(currentValue.slice(0, -1) || '0');
+            }
+
+            $('.number-button').click(function () {
+                display($(this).text());
+            });
+
+            $('#equals').click(function () {
+                calculate();
+            });
+
+            $('#clear').click(function () {
+                clearScreen();
+            });
+
+            $('#del').click(function () {
+                del();
+            });
+
+            $('#percent').click(function () {
+                display('%');
+            });
+
+            $('#divide').click(function () {
+                display('/');
+            });
+
+            $('#multiply').click(function () {
+                display('*');
+            });
+
+            $('#minus').click(function () {
+                display('-');
+            });
+
+            $('#plus').click(function () {
+                display('+');
+            });
+
+            $('#decimal').click(function () {
+                let currentVal = $outputScreen.val();
+                if (!currentVal.includes('.')) {
+                    display('.');
+                }
+            });
+        });
     </script>
-    
 </body>
+
 </html>
