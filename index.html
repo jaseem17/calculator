@@ -16,19 +16,19 @@
         <div
             class="bg-gray-300 p-6 rounded-3xl shadow-inner grid grid-cols-4 gap-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
 
-            <!-- Output screen -->
+           
             <input type="text" placeholder="0" id="outputscreen"
                 class="col-span-4 h-20 w-64 bg-gray-100 text-black text-5xl text-right px-5 py-4 rounded-xl shadow-inner shadow-white mb-8">
 
-            <!-- Calculator buttons -->
+            
             <button id="clear"
-                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">AC</button>
+                class="bg-black  text-white h-12 w-12 rounded-full shadow-md text-xl   hover:bg-gray-700 hover:text-white">AC</button>
             <button id="del"
-                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">DE</button>
+                class="bg-black  text-white h-12 w-12 rounded-full shadow-md text-xl   hover:bg-gray-700 hover:text-white">DE</button>
             <button id="percent"
-                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">%</button>
+                class="bg-black  text-white h-12 w-12 rounded-full shadow-md text-xl   hover:bg-gray-700 hover:text-white">%</button>
             <button id="divide"
-                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">/</button>
+                class="bg-black  text-white h-12 w-12 rounded-full shadow-md text-xl   hover:bg-gray-700 hover:text-white">/</button>
 
             <button
                 class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl hover:bg-blue-500 hover:text-white">7</button>
@@ -38,7 +38,7 @@
             <button
                 class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">9</button>
             <button id="multiply"
-                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl  hover:bg-blue-500 hover:text-white">*</button>
+                class="bg-black  text-white h-12 w-12 rounded-full shadow-md text-xl  hover:bg-gray-700 hover:text-white">*</button>
 
             <button
                 class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">4</button>
@@ -47,7 +47,7 @@
             <button
                 class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">6</button>
             <button id="minus"
-                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl    hover:bg-blue-500 hover:text-white">-</button>
+                class="bg-black  text-white h-12 w-12 rounded-full shadow-md text-xl    hover:bg-gray-700 hover:text-white">-</button>
 
             <button
                 class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">1</button>
@@ -56,19 +56,19 @@
             <button
                 class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl    hover:bg-blue-500 hover:text-white">3</button>
             <button id="plus"
-                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">+</button>
+                class="bg-black  text-white h-12 w-12 rounded-full shadow-md text-xl   hover:bg-gray-700 hover:text-white">+</button>
 
             <button
-                class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl   hover:bg-blue-500 hover:text-white">0</button>
-            <button id="decimal"
-                class="bg-blue-500 h-12 w-12 rounded-full shadow-md text-xl    hover:bg-blue-500 hover:text-white">.</button>
+                class="number-button bg-gray-100 h-12 w-12 rounded-full shadow-md text-xl    hover:bg-blue-500 hover:text-black">0</button>
+           
             <button id="equals"
-                class="bg-blue-500 text-white h-12 w-30 rounded-full shadow-md text-xl col-span-2 ">=</button>
+                class="bg-red-500 text-white h-12 w-30 rounded-full shadow-md text-xl col-span-2 ">=</button>
+                <button id="decimal"
+                class="bg-black  text-white h-12 w-12 rounded-full shadow-md text-xl    hover:bg-gray-700 hover:text-white">.</button>
 
-        </div>
-    </div>
 
-    <script>  
+    <script>
+
         $(document).ready(function () {
             const $outputScreen = $('#outputscreen');
 
