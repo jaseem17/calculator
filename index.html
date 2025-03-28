@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -67,86 +66,9 @@
                 class="bg-black  text-white h-12 w-12 rounded-full shadow-md text-xl    hover:bg-gray-700 hover:text-white">.</button>
 
 
-    <script>
-
-        $(document).ready(function () {
-            const $outputScreen = $('#outputscreen');
-
-            function display(number) {
-                let currentVal = $outputScreen.val();
-                if (currentVal === '0') {
-                    $outputScreen.val(number);
-                } else {
-                    $outputScreen.val(currentVal + number);
-                }
-            }
-
-            function calculate() {
-                try {
-                    let result = eval($outputScreen.val());
-                    if (isNaN(result) || result === Infinity || result === -Infinity) {
-                        throw new Error("Invalid expression");
-                    }
-                    $outputScreen.val(result);
-                } catch (err) {
-                    alert("Invalid expression");
-                    $outputScreen.val('Error');
-                }
-            }
-
-            function clearScreen() {
-                $outputScreen.val('');
-            }
-
-            function del() {
-                let currentValue = $outputScreen.val();
-                $outputScreen.val(currentValue.slice(0, -1) || '0');
-            }
-
-            $('.number-button').click(function () {
-                display($(this).text());
-            });
-
-            $('#equals').click(function () {
-                calculate();
-            });
-
-            $('#clear').click(function () {
-                clearScreen();
-            });
-
-            $('#del').click(function () {
-                del();
-            });
-
-            $('#percent').click(function () {
-                display('%');
-            });
-
-            $('#divide').click(function () {
-                display('/');
-            });
-
-            $('#multiply').click(function () {
-                display('*');
-            });
-
-            $('#minus').click(function () {
-                display('-');
-            });
-
-            $('#plus').click(function () {
-                display('+');
-            });
-
-            $('#decimal').click(function () {
-                let currentVal = $outputScreen.val();
-                if (!currentVal.includes('.')) {
-                    display('.');
-                }
-            });
-        });
-    </script>
+ 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./js/script.js"></script> 
 </body>
 
 </html>
